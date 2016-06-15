@@ -9,5 +9,6 @@ RUN git clone  https://github.com/meteor/todos
 RUN cd todos                                                                                                                                                                   
 RUN npm install --save postcss-cli autoprefixer                                                                                                                                
 RUN meteor npm install --save faker 
+RUN meteor update
 
 ENTRYPOINT ["meteor","run","--port"," 0.0.0.0:80"]
