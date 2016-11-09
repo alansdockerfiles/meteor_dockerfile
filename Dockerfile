@@ -5,7 +5,8 @@ RUN locale-gen "en_US.UTF-8"
 RUN dpkg-reconfigure locales 
 RUN apt-get -y install language-pack-en
 RUN update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-RUN curl https://install.meteor.com/ | sh             
+RUN curl https://install.meteor.com/ | sh
+RUN apt-get update
 RUN apt-get -y install git                           
 RUN git clone  https://github.com/meteor/todos      
 RUN cd todos                                       
