@@ -12,7 +12,7 @@ RUN git clone  https://github.com/meteor/todos
 RUN cd todos                                       
 RUN npm install --save postcss-cli autoprefixer   
 RUN cd /todos && meteor npm install --save faker
-RUN cd /todos && meteor update
+RUN cd /todos && meteor update --unsafe-perm
 
 WORKDIR /todos
 ENTRYPOINT ["sh","-c","cd /todos && meteor run --port  0.0.0.0:80"]
